@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: antiquewhite;
+
+    padding: 20px;
+}
+
+#cityInformation{
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+
+padding: 20px;
+}
+
+#cityInput{
+font-size: 20px;
+margin-bottom: 20px;
+}
+
+#searchButton{
+font-size: 15px;
+padding: 5px;
+border-radius: 10px;
+}
+
+#searchButton:hover{
+    cursor: pointer;
+    background-color: antiquewhite;
+}
