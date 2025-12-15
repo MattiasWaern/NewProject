@@ -68,6 +68,8 @@ async function searchCity(){
    
 const condition = currentData.current.condition.text;
 
+// --------------------- Current Weather
+
 document.getElementById("cityInformation").innerHTML = `
     <h2>${currentData.location.name}, ${currentData.location.country}</h2>
     <h3>${currentData.location.region}</h3>
@@ -85,6 +87,8 @@ document.getElementById("weatherInformation").innerHTML = `
     <p>${currentData.location.localtime}</p>
 `;
 
+// --------------------- Weather forecast
+
 const forecastContainer = document.getElementById("weatherForecast");
 forecastContainer.innerHTML = "";
 
@@ -101,9 +105,6 @@ forecastData.forecast.forecastday.forEach(day => {
         `;
 });
 
-
-
-console.log(data);
 
 document.body.style.background =
   weatherGradients[condition] ||
