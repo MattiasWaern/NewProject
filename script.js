@@ -37,7 +37,7 @@ async function getWeatherForecast(city){
 
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no`
+            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no`
         );
 
     if (!response.ok) {
@@ -95,7 +95,7 @@ forecastContainer.innerHTML = "";
 forecastData.forecast.forecastday.forEach(day => {
     forecastContainer.innerHTML += `
             <div class="forecast-day">
-                <p>${day.date}</p>
+                <p>Date: ${day.date}</p>
                 <img src="https:${day.day.condition.icon}" alt="forecast-icon">
                 <p>${day.day.maxtemp_c}° / ${day.day.mintemp_c}°</p>
                 <p>💧 ${day.day.avghumidity}%</p>
