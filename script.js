@@ -1,3 +1,5 @@
+// stockholm
+
 const weatherGradients = {
   "Overcast": "linear-gradient(180deg, #6e7f80 0%, #9fb3b8 50%, #dbe7e4 100%)",
   "Partly cloudy": "linear-gradient(180deg, #8ec5fc 0%, #cfd9df 50%, #fdfbfb 100%)",
@@ -46,11 +48,18 @@ const condition = data.current.condition.text;
 
 document.getElementById("cityInformation").innerHTML = `
     <h2>${data.location.name}, ${data.location.country}</h2>
+    <h3>${data.location.region}</h3>
     <img src="https:${data.current.condition.icon}" alt="weather-Icon">
     <p>${data.current.temp_c}°C</p>
     <p>${data.current.condition.text}</p>
+    <p>${data.current.vis_km} km</p>
+    <p>${data.current.humidity}</p>
+    <p>${data.current.wind_kph} kph</p>
+    <p>${data.current.precip_mm} mm</p>
     <p>${data.location.localtime}</p>
 `;
+
+console.log(data);
 
 document.body.style.background =
   weatherGradients[condition] ||
