@@ -20,13 +20,11 @@ body {
 }
 
 main{
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
  
     padding: 20px;
-    height: 50vh;
+    height: fit-content;
     width: fit-content;
 
     background-color: yellowgreen;
@@ -42,6 +40,19 @@ align-items: center;
 
 padding: 20px;
 font-size: 20px;
+}
+
+#weatherInformatiom{
+  display: flex;
+  flex-direction: row;
+
+}
+
+#weatherForecast{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #cityInput{
