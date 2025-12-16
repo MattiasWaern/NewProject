@@ -207,7 +207,7 @@ document.getElementById('cityInput').addEventListener('keypress', function(e) {
 });
 
 window.addEventListener('load', function() {
-    this.document.getElementById('cityInput').value = 'Stockholm';
+    this.document.getElementById('cityInput').value = 'Guayaquil ';
     searchCity();
 });
 
