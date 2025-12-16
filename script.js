@@ -83,13 +83,25 @@ async function searchCity(){
         return;
     }
 
-    const currentData = await getWeatherInformation(city) 
-    const forecastData = await getWeatherForecast(city);
+    // Laddning
+    document.getElementById('loading').style.display = 'block';
+    document.getElementById('errorMessage').style.display = 'none';
 
-    if(!currentData) return;
-    if(!forecastData) return;
+    try {
+        const currentData = await getWeatherInformation(city);
+        const forecastData = await getWeatherForecast(city);
+
+        if(!currentData || !forecastData) {
+            showError("Kunde inte hitta väderinformation för denna stad. Försök igen senare.")
+            return;
+        }
+    }
+
+    const condition = currentData.current.condition.text;
    
-const condition = currentData.current.condition.text;
+
+
+
 
 // --------------------- Current Weather
 
