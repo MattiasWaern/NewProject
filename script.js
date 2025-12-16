@@ -2,6 +2,7 @@
 
 const weatherGradients = {
   "Overcast": "linear-gradient(180deg, #6e7f80 0%, #9fb3b8 50%, #dbe7e4 100%)",
+  "Cloudy": "linear-gradient(180deg, #bdc3c7 0%, #2c3e50 100%)",
   "Partly cloudy": "linear-gradient(180deg, #8ec5fc 0%, #cfd9df 50%, #fdfbfb 100%)",
   "Clear": "linear-gradient(180deg, #4facfe 0%, #00c6fb 60%, #e0f7ff 100%)",
   "Sunny": "linear-gradient(180deg, #fddb92 0%, #f6d365 50%, #fda085 100%)",
@@ -29,6 +30,7 @@ async function getWeatherInformation(city) {
 
     } catch (error) {
         console.error("Error fetching weather data:", error);
+        return null;
     }
 }
 
@@ -49,6 +51,7 @@ async function getWeatherForecast(city){
 
     } catch (error){
         console.error("Error fetching weather forecast", error);
+        return null;
     }
 }
 
@@ -95,9 +98,10 @@ async function searchCity(){
             showError("Kunde inte hitta väderinformation för denna stad. Försök igen senare.")
             return;
         }
-    }
+        const condition = currentData.current.condition.text;
+    
 
-    const condition = currentData.current.condition.text;
+    
    
 
 
@@ -126,17 +130,17 @@ document.getElementById("cityInformation").innerHTML = `
             <div class="detail-item">
                 <i class="fas fa-tint"></i>
                 <p>Fuktighet</p>
-                <p class=detail-value">${currentData.current.humidity}%</p>
+                <p class="detail-value">${currentData.current.humidity}%</p>
             </div>
             <div class="detail-item">
                 <i class="fas fa-wind"></i>
                 <p>Vind</p>
-                <p class=detail-value">${currentData.current.wind_kph}km/h</p>
+                <p class="detail-value">${currentData.current.wind_kph}km/h</p>
             </div>
             <div class="detail-item">
-                <i class="fas fa-clound-rain"></i>
+                <i class="fas fa-cloud-rain"></i>
                 <p>Nederbörd</p>
-                <p class=detail-value">${currentData.current.precip_mm} mm</p>
+                <p class="detail-value">${currentData.current.precip_mm} mm</p>
             </div>
         </div>
     </div>
@@ -188,6 +192,9 @@ function showError(message){
     errorDiv.textContent = message;
     errorDiv.style.display = 'block';
     document.getElementById('loading').style.display = 'none';
+}
+
+
 }
 
 document.getElementById('searchButton').addEventListener('click', searchCity);
