@@ -206,6 +206,8 @@ document.getElementById('cityInput').addEventListener('keypress', function(e) {
     }
 });
 
+
+// Välj vilken stad som sidan startar i
 window.addEventListener('load', function() {
     this.document.getElementById('cityInput').value = 'Guayaquil ';
     searchCity();

@@ -11,7 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  transition: background 1s ease;
+  transition: all 1s ease;
   padding: 20px;
 }
 
@@ -204,7 +204,7 @@ body {
   padding: 15px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  transition: transform 0.3 ease;
+  transition: all 0.3 ease;
 }
 
 .detail-item:hover {
