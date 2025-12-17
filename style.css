@@ -254,7 +254,64 @@ body {
   gap: 25px;
 }
 
+.forecast-day{
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 25px;
+  text-align: center;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
 
+.forecast-day:hover{
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-day p:first-child{
+  font-size: 0.9rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: rgba(255, 255, 255, 0.95);
+  text-transform: uppercase;
+}
+
+.forecast-day img{
+  width: 70px;
+  height: 70px;
+  margin-bottom: 15px;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+.forecast-temp {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 10px 0;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.forecast-details{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.forecast-details span {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 10px;
+  border-radius: 10px;
+}
 
 .loading{
   display: none;
