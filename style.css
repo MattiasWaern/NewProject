@@ -66,10 +66,10 @@ body {
   outline: none;
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
   font-family: "Poppins", sans-serif;
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease;
 }
 
-#cityInput {
+#cityInput:focus {
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.25);
   transform: translateY(-2px);
 }
@@ -98,6 +98,10 @@ body {
   white-space: nowrap;
 }
 
+#searchButton i{
+  font-family: "Poppins", sans-serif;
+}
+
 #searchButton:hover {
   transform: translateY(-3px);
   box-shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
@@ -111,7 +115,7 @@ body {
   box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
   color: white;
   border: 1px solid rgba(255, 255, 255, 0.2);
-  animation: fadeIn 0.8 ease;
+  animation: fadeIn 0.8s ease;
 }
 
 @keyframes fadeIn {
@@ -204,7 +208,7 @@ body {
   padding: 15px;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 15px;
-  transition: all 0.3 ease;
+  transition: transform 0.3 ease, background 0.3s ease;
 }
 
 .detail-item:hover {
@@ -273,11 +277,11 @@ body {
 }
 
 .forecast-day p:first-child{
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 600;
   margin-bottom: 15px;
   color: rgba(255, 255, 255, 0.95);
-  text-transform: uppercase;
+  text-transform: capitalize;
 }
 
 .forecast-day img{
@@ -345,7 +349,7 @@ body {
 
 .footer{
   text-align: center;
-  color: white;
+  color: gray;
   margin-top: 30px;
   opacity: 0.8;
   font-size: 0.9rem;
