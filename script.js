@@ -143,6 +143,16 @@ document.getElementById("cityInformation").innerHTML = `
                 <p>Nederbörd</p>
                 <p class="detail-value">${currentData.current.precip_mm} mm</p>
             </div>
+            <div class="detail-item">
+                <i class="fas fa-sun"></i>
+                <p>Soluppgång</p>
+                <p class="detail-value">${forecastData.forecast.forecastday[0].astro.sunrise}</p>
+            </div>
+            <div class="detail-item">
+                <i class="fas fa-moon"></i>
+                <p>Solnedgång</p>
+                <p class="detail-value">${forecastData.forecast.forecastday[0].astro.sunset}</p>
+            </div>
         </div>
     </div>
     <div class="time-info">
