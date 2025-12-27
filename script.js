@@ -40,7 +40,7 @@ async function getWeatherForecast(city){
 
     try {
         const response = await fetch(
-            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=7&aqi=no`
+            `http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${city}&days=3&aqi=no`
         );
 
     if (!response.ok) {
