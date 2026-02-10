@@ -1,6 +1,6 @@
 # 🌦️ Weather App
 
-En enkel och responsiv väderapplikation byggd med **HTML, CSS och JavaScript** som hämtar aktuell väderinformation och 7-dagars prognos via **WeatherAPI**.  
+En enkel och responsiv väderapplikation byggd med **HTML, CSS och JavaScript** som hämtar aktuell väderinformation och 3-dagars prognos via **WeatherAPI**.  
 Användaren kan söka efter valfri stad och få en tydlig översikt av väderläge, temperatur, vind, nederbörd och soltider.
 
 Bakgrunden ändras dynamiskt beroende på väderförhållanden för en mer levande användarupplevelse.
@@ -11,7 +11,7 @@ Bakgrunden ändras dynamiskt beroende på väderförhållanden för en mer levan
 
 - 🔍 Sök väder på stad  
 - 🌡️ Aktuellt väder (temperatur, vädertyp och ikon)  
-- 📅 7-dagars väderprognos  
+- 📅 3-dagars väderprognos  
 - 💨 Vind, luftfuktighet, nederbörd och sikt  
 - 🌅 Soluppgång och solnedgång  
 - 🎨 Dynamisk bakgrund baserad på väder  
